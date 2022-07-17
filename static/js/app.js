@@ -2,7 +2,7 @@ function init() {
     // Use the D3 library to read in `samples.json`.
     d3.json("samples.json").then(data => {
       // Create dropdown selection 
-      let names = data.city;
+      let names = data.names;
       let dropDown = d3.select("#selDataset");
       names.forEach(sample => {dropDown.append("option").text(sample).property("value", sample);});
         let samples = dropDown.property("value");
